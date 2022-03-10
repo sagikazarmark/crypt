@@ -8,7 +8,7 @@ require (
 	go.etcd.io/etcd/client/v2 v2.305.2
 	golang.org/x/crypto v0.0.0-20210817164053-32db794688a5
 	google.golang.org/api v0.70.0
-	google.golang.org/grpc v1.44.0
+	google.golang.org/grpc v1.45.0
 )
 
 require (
