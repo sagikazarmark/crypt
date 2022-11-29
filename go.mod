@@ -4,7 +4,7 @@ go 1.17
 
 require (
 	cloud.google.com/go/firestore v1.8.0
-	github.com/hashicorp/consul/api v1.15.3
+	github.com/hashicorp/consul/api v1.17.0
 	github.com/pkg/errors v0.9.1
 	go.etcd.io/etcd/api/v3 v3.5.6
 	go.etcd.io/etcd/client/v2 v2.305.6
@@ -34,7 +34,7 @@ require (
 	github.com/hashicorp/go-immutable-radix v1.3.1 // indirect
 	github.com/hashicorp/go-rootcerts v1.0.2 // indirect
 	github.com/hashicorp/golang-lru v0.5.4 // indirect
-	github.com/hashicorp/serf v0.9.8 // indirect
+	github.com/hashicorp/serf v0.10.1 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/mattn/go-colorable v0.1.12 // indirect
 	github.com/mattn/go-isatty v0.0.14 // indirect
