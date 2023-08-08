@@ -11,8 +11,8 @@ require (
 	go.etcd.io/etcd/client/v2 v2.305.9
 	go.etcd.io/etcd/client/v3 v3.5.9
 	golang.org/x/crypto v0.11.0
-	google.golang.org/api v0.132.0
-	google.golang.org/grpc v1.56.2
+	google.golang.org/api v0.135.0
+	google.golang.org/grpc v1.57.0
 )
 
 require (
@@ -64,6 +64,6 @@ require (
 	google.golang.org/appengine v1.6.7 // indirect
 	google.golang.org/genproto v0.0.0-20230706204954-ccb25ca9f130 // indirect
 	google.golang.org/genproto/googleapis/api v0.0.0-20230706204954-ccb25ca9f130 // indirect
-	google.golang.org/genproto/googleapis/rpc v0.0.0-20230711160842-782d3b101e98 // indirect
+	google.golang.org/genproto/googleapis/rpc v0.0.0-20230726155614-23370e0ffb3e // indirect
 	google.golang.org/protobuf v1.31.0 // indirect
 )
