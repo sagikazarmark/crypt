@@ -2,11 +2,9 @@ package natskv
 
 import (
 	"context"
-	"strings"
-	"time"
-
 	"github.com/nats-io/nats.go"
 	"github.com/sagikazarmark/crypt/backend"
+	"strings"
 )
 
 type Client struct {
@@ -35,7 +33,6 @@ func (c *Client) Get(key string) ([]byte, error) {
 }
 
 func (c *Client) GetWithContext(ctx context.Context, key string) ([]byte, error) {
-	defer c.conn.Close()
 	kv, err := c.js.KeyValue(c.bucket)
 	if err != nil {
 		return nil, err
@@ -54,7 +51,6 @@ func (c *Client) List(bucket string) (backend.KVPairs, error) {
 }
 
 func (c *Client) ListWithContext(ctx context.Context, bucket string) (backend.KVPairs, error) {
-	defer c.conn.Close()
 	res := backend.KVPairs{}
 	kv, err := c.js.KeyValue(c.bucket)
 	if err != nil {
@@ -87,7 +83,6 @@ func (c *Client) Set(key string, value []byte) error {
 }
 
 func (c *Client) SetWithContext(ctx context.Context, key string, value []byte) error {
-	defer c.conn.Close()
 	kv, err := c.js.KeyValue(c.bucket)
 	if err != nil {
 		return err
@@ -105,8 +100,7 @@ func (c *Client) Watch(key string, stop chan bool) <-chan *backend.Response {
 	return c.WatchWithContext(context.TODO(), key, stop)
 }
 
-func (c *Client) WatchWithContext(ctx context.Context, key string, stop chan bool) <-chan *backend.Response {
-	defer c.conn.Close()
+func (c *Client) WatchWithContext(ctx context.Context, key string, stop <-chan bool) <-chan *backend.Response {
 	ch := make(chan *backend.Response, 0)
 
 	kv, err := c.js.KeyValue(c.bucket)
@@ -120,18 +114,28 @@ func (c *Client) WatchWithContext(ctx context.Context, key string, stop chan boo
 	}
 
 	go func() {
-		go func() {
-			defer c.conn.Close()
-			<-stop
-			watch.Stop()
-		}()
-
+		defer close(ch)
+		initialValuesReceived := false
 		for {
-			k := <-watch.Updates()
-			ch <- &backend.Response{
-				Value: k.Value(),
+			select {
+			case k := <-watch.Updates():
+				if !initialValuesReceived {
+					if k == nil {
+						initialValuesReceived = true
+					}
+					continue
+				}
+
+				ch <- &backend.Response{
+					Value: k.Value(),
+				}
+			case <-ctx.Done():
+				_ = watch.Stop()
+				return
+			case <-stop:
+				_ = watch.Stop()
+				return
 			}
-			time.Sleep(time.Second * 5)
 		}
 
 	}()
