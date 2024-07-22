@@ -9,7 +9,7 @@ require (
 	github.com/hashicorp/consul/api v1.29.2
 	github.com/nats-io/nats.go v1.36.0
 	github.com/pkg/errors v0.9.1
-	go.etcd.io/etcd/api/v3 v3.5.14
+	go.etcd.io/etcd/api/v3 v3.5.15
 	go.etcd.io/etcd/client/v2 v2.305.14
 	go.etcd.io/etcd/client/v3 v3.5.14
 	golang.org/x/crypto v0.25.0
