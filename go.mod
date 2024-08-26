@@ -6,7 +6,7 @@ go 1.21
 
 require (
 	cloud.google.com/go/firestore v1.16.0
-	github.com/hashicorp/consul/api v1.29.2
+	github.com/hashicorp/consul/api v1.29.3
 	github.com/nats-io/nats.go v1.37.0
 	github.com/pkg/errors v0.9.1
 	go.etcd.io/etcd/api/v3 v3.5.15
