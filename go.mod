@@ -1,6 +1,7 @@
 module github.com/sagikazarmark/crypt
 
 go 1.21
+toolchain go1.22.5
 
 // toolchain go1.21.7
 
@@ -9,9 +10,9 @@ require (
 	github.com/hashicorp/consul/api v1.29.4
 	github.com/nats-io/nats.go v1.37.0
 	github.com/pkg/errors v0.9.1
-	go.etcd.io/etcd/api/v3 v3.5.15
+	go.etcd.io/etcd/api/v3 v3.5.16
 	go.etcd.io/etcd/client/v2 v2.305.15
-	go.etcd.io/etcd/client/v3 v3.5.15
+	go.etcd.io/etcd/client/v3 v3.5.16
 	golang.org/x/crypto v0.27.0
 	google.golang.org/api v0.197.0
 	google.golang.org/grpc v1.66.2
@@ -54,7 +55,7 @@ require (
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/nats-io/nkeys v0.4.7 // indirect
 	github.com/nats-io/nuid v1.0.1 // indirect
-	go.etcd.io/etcd/client/pkg/v3 v3.5.15 // indirect
+	go.etcd.io/etcd/client/pkg/v3 v3.5.16 // indirect
 	go.opencensus.io v0.24.0 // indirect
 	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.54.0 // indirect
 	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.54.0 // indirect
