@@ -13,15 +13,15 @@ require (
 	go.etcd.io/etcd/client/v2 v2.305.15
 	go.etcd.io/etcd/client/v3 v3.5.15
 	golang.org/x/crypto v0.27.0
-	google.golang.org/api v0.197.0
+	google.golang.org/api v0.198.0
 	google.golang.org/grpc v1.66.2
 )
 
 require (
 	cloud.google.com/go v0.115.1 // indirect
-	cloud.google.com/go/auth v0.9.3 // indirect
+	cloud.google.com/go/auth v0.9.4 // indirect
 	cloud.google.com/go/auth/oauth2adapt v0.2.4 // indirect
-	cloud.google.com/go/compute/metadata v0.5.0 // indirect
+	cloud.google.com/go/compute/metadata v0.5.1 // indirect
 	cloud.google.com/go/longrunning v0.6.0 // indirect
 	github.com/armon/go-metrics v0.4.1 // indirect
 	github.com/coreos/go-semver v0.3.0 // indirect
