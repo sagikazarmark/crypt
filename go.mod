@@ -1,6 +1,7 @@
 module github.com/sagikazarmark/crypt
 
 go 1.21
+toolchain go1.22.5
 
 // toolchain go1.21.7
 
@@ -14,7 +15,7 @@ require (
 	go.etcd.io/etcd/client/v3 v3.5.15
 	golang.org/x/crypto v0.30.0
 	google.golang.org/api v0.211.0
-	google.golang.org/grpc v1.67.1
+	google.golang.org/grpc v1.68.1
 )
 
 require (
