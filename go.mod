@@ -1,10 +1,10 @@
 module github.com/sagikazarmark/crypt
 
-go 1.23.8
+go 1.25.0
 
 require (
 	cloud.google.com/go/firestore v1.18.0
-	github.com/hashicorp/consul/api v1.32.1
+	github.com/hashicorp/consul/api v1.32.3
 	github.com/nats-io/nats.go v1.45.0
 	github.com/pkg/errors v0.9.1
 	go.etcd.io/etcd/api/v3 v3.6.4
@@ -61,7 +61,7 @@ require (
 	go.opentelemetry.io/otel/trace v1.37.0 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
 	go.uber.org/zap v1.27.0 // indirect
-	golang.org/x/exp v0.0.0-20250305212735-054e65f0b394 // indirect
+	golang.org/x/exp v0.0.0-20250808145144-a408d31f581a // indirect
 	golang.org/x/net v0.43.0 // indirect
 	golang.org/x/oauth2 v0.30.0 // indirect
 	golang.org/x/sync v0.16.0 // indirect
