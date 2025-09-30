@@ -5,7 +5,7 @@ go 1.23.8
 require (
 	cloud.google.com/go/firestore v1.18.0
 	github.com/hashicorp/consul/api v1.32.1
-	github.com/nats-io/nats.go v1.45.0
+	github.com/nats-io/nats.go v1.46.1
 	github.com/pkg/errors v0.9.1
 	go.etcd.io/etcd/api/v3 v3.6.4
 	go.etcd.io/etcd/client/v2 v2.305.22
